@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
-import sqlite3
+try:
+    import pysqlite3 as sqlite3
+except ImportError:
+    import sqlite3
 
 # Configuração do banco de dados local (não depende do Google!)
 def init_db():
